@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购买页面</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #3b0a45;
+            color: white;
+            font-family: 'Pixelated MS', sans-serif;
+            overflow: hidden;
+        }
+        #container {
+            position: relative;
+            width: 100%;
+            height: 100%;
+        }
+        #background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: -1;
+        }
+        .text {
+            position: absolute;
+            width: 100%;
+            text-align: center;
+        }
+        #text1 { top: 10%; }
+        #text2 { top: 20%; }
+        #text3 { top: 30%; }
+        #text4 { top: 40%; }
+        #purchase-btn {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 10px 20px;
+            background-color: #a741d9;
+            border: none;
+            color: white;
+            font-size: 20px;
+            cursor: pointer;
+        }
+        #popup {
+            display: none;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-align: center;
+        }
+        #popup-image {
+            width: 300px;
+            height: 200px;
+            background-color: #fff;
+        }
+        #countdown {
+            font-size: 24px;
+            margin-top: 20px;
+        }
+        #download-links {
+            display: none;
+            position: absolute;
+            width: 100%;
+            height: 100%;
+        }
+        #download-links-left, #download-links-right {
+            position: absolute;
+            top: 0;
+            width: 15%;
+            height: 100%;
+            overflow-y: auto;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+        #download-links-left {
+            left: 0;
+        }
+        #download-links-right {
+            right: 0;
+        }
+        #download-links a {
+            display: block;
+            color: white;
+            margin-top: 10px;
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img id="background-image" src="background.jpg" alt="Background Image">
+        <div id="text1" class="text">欢迎你，方块人，本站为官方代理，为大陆同胞降价分享（外网30元，很贵呢），实时更新，尽请期待。</div> <!-- 修改文字内容 -->
+        <div id="text2" class="text">点击下方购买按钮扫码支付，消费一次，永久服务哦~</div> <!-- 修改文字内容 -->
+        <div id="text3" class="text">价格仅10元，支持微信和支付宝，可以分开付哦。</div> <!-- 修改文字内容 -->
+        <div id="text4" class="text">绝不跑路，永远服务。</div> <!-- 修改文字内容 -->
+        <button id="purchase-btn">购买</button>
+        <div id="popup">
+            <img id="popup-image" src="popup.jpg" alt="Popup Image"> <!-- 修改图片 -->
+            <div id="countdown">120</div>
+            <div id="popup-text-left">请在2分钟内支付完成否则页面即将刷新失败</div> <!-- 修改文字内容 -->
+            <div id="popup-text-right">支付完成请耐心等待倒计时结束即可，感谢支持！</div> <!-- 修改文字内容 -->
+        </div>
+        <div id="download-links">
+            <div id="download-links-left">
+                <a href="video1.mp4" download>珍妮与马特的夜晚</a> <!-- 修改视频1名称 -->
+                <a href="video2.mp4" download>珍妮舞蹈</a> <!-- 修改视频2名称 -->
+                <a href="video3.mp4" download>珍妮乳摇</a> <!-- 修改视频3名称 -->
+                <a href="video4.mp4" download>珍妮乳交</a> <!-- 修改视频4名称 -->
+                <a href="video5.mp4" download>珍妮上位</a> <!-- 修改视频5名称 -->
+                <a href="video6.mp4" download>铁傀儡与HB</a> <!-- 修改视频6名称 -->
+                <a href="video7.mp4" download>珍妮与安柏</a> <!-- 修改视频7名称 -->
+                <a href="video8.mp4" download>安柏自慰</a> <!-- 修改视频8名称 -->
+                <a href="video9.mp4" download>珍妮吃奶</a> <!-- 修改视频9名称 -->
+                <a href="video10.mp4" download>史蒂夫与小蜘蛛</a> <!-- 修改视频10名称 -->
+                <a href="video11.mp4" download>珍妮屁股</a> <!-- 修改视频11名称 -->
+                <a href="video12.mp4" download>安柏胸部</a> <!-- 修改视频12名称 -->
+                <a href="video13.mp4" download>玛丽与珍妮</a> <!-- 修改视频13名称 -->
+                <a href="video14.mp4" download>玛丽照镜子</a> <!-- 修改视频14名称 -->
+                <a href="video15.mp4" download>安柏测试</a> <!-- 修改视频15名称 -->
+                <a href="video16.mp4" download>安柏被干</a> <!-- 修改视频16名称 -->
+                <a href="video17.mp4" download>珍妮与法师</a> <!-- 修改视频17名称 -->
+                <a href="video18.mp4" download>玛丽药水</a> <!-- 修改视频18名称 -->
+                <a href="video19.mp4" download>珍妮乳胶2</a> <!-- 修改视频19名称 -->
+                <a href="video20.mp4" download>玛丽与HB</a> <!-- 修改视频20名称 -->
+            </div>
+            <div id="download-links-right">
+                <a href="video21.mp4" download>海滩风光</a> <!-- 修改视频21名称 -->
+                <a href="video22.mp4" download>幽灵日常</a> <!-- 修改视频22名称 -->
+                <a href="video23.mp4" download>珍妮与墨鱼</a> <!-- 修改视频23名称 -->
+                <a href="video24.mp4" download>玛丽药水2</a> <!-- 修改视频24名称 -->
+                <a href="video25.mp4" download>电影预告1</a> <!-- 修改视频25名称 -->
+                <a href="video26.mp4" download>珍妮与安柏2</a> <!-- 修改视频26名称 -->
+                <a href="video27.mp4" download>安柏与马</a> <!-- 修改视频27名称 -->
+                <a href="video28.mp4" download>小熊比亚诞生</a> <!-- 修改视频28名称 -->
+                <a href="video29.mp4" download>珍妮与苦力怕</a> <!-- 修改视频29名称 -->
+                <a href="video30.mp4" download>比亚与骑士玩家</a> <!-- 修改视频30名称 -->
+                <a href="video31.mp4" download>幽灵与保安</a> <!-- 修改视频31名称 -->
+                <a href="video32.mp4" download>珍妮的奇妙冒险1-4</a> <!-- 修改视频32名称 -->
+                <a href="video33.mp4" download>电影预告2</a> <!-- 修改视频33名称 -->
+                <a href="video34.mp4" download>比亚口交</a> <!-- 修改视频34名称 -->
+                <a href="video35.mp4" download>幽灵与铁傀儡</a> <!-- 修改视频35名称 -->
+                <a href="video36.mp4" download>大电影1</a> <!-- 修改视频36名称 -->
+                <a href="video37.mp4" download>大电影2</a> <!-- 修改视频37名称 -->
+                <a href="video38.mp4" download>大电影3</a> <!-- 修改视频38名称 -->
+                <a href="video39.mp4" download>大电影4</a> <!-- 修改视频39名称 -->
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const purchaseBtn = document.getElementById('purchase-btn');
+        const popup = document.getElementById('popup');
+        const countdownElement = document.getElementById('countdown');
+        const downloadLinks = document.getElementById('download-links');
+        let countdown;
+        let isFirstClick = localStorage.getItem('hasCompletedCountdown') !== 'true';
+
+        function startCountdown() {
+            clearInterval(countdown);
+            popup.style.display = 'block';
+            let timeLeft = 120;
+            countdownElement.textContent = timeLeft;
+
+            countdown = setInterval(() => {
+                timeLeft--;
+                countdownElement.textContent = timeLeft;
+
+                if (timeLeft <= 0) {
+                    clearInterval(countdown);
+                    popup.style.display = 'none';
+                    if (isFirstClick) {
+                        isFirstClick = false;
+                        localStorage.setItem('hasCompletedCountdown', 'true');
+                    } else {
+                        downloadLinks.style.display = 'block';
+                    }
+                }
+            }, 1000);
+        }
+
+        purchaseBtn.addEventListener('click', () => {
+            if (localStorage.getItem('hasCompletedCountdown') === 'true') {
+                downloadLinks.style.display = 'block';
+            } else {
+                startCountdown();
+            }
+        });
+
+        if (localStorage.getItem('hasCompletedCountdown') === 'true') {
+            downloadLinks.style.display = 'block';
+        }
+    </script>
+</body>
+</html>
